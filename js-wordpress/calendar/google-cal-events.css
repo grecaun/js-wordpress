@@ -1,0 +1,94 @@
+.cal-calendar {
+    border-radius: 4px;
+    padding: 3px;
+    border: 1px solid #ddd;
+}
+.cal-header {
+    text-align: center;
+    font-size: 25px;
+    margin: 4px;
+    font-family: 'Ubuntu Condensed', sans-serif !important;
+}
+#cal-upcoming {
+
+}
+.cal-event {
+    border: 1px solid #ddd;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: stretch;
+}
+.cal-event-first {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.cal-event-last {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.cal-link {
+    text-decoration: none;
+}
+.cal-link:focus, .cal-link:hover {
+    text-decoration: none;
+}
+.cal-date {
+    border-right: 1px solid #ddd;
+    min-width: 90px;
+    padding: 5px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu Condensed', sans-serif !important;
+}
+.cal-date-sub {
+    margin-left: 10px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.cal-date-end {
+    border-left: 1px solid #ddd;
+}
+.cal-date-to {
+    float: left;
+    padding-top: 9px;
+    margin-right: 5px;
+    margin-left: 4px;
+    font-size: 27px;
+}
+.cal-date-month {
+    font-size: 17px;
+}
+.cal-date-day {
+    font-size: 27px;
+}
+.cal-date-year {
+    font-size: 17px;
+}
+.cal-event-info {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.cal-summary {
+    margin: 2px;
+    font-size: 17px;
+    font-family: 'Ubuntu Condensed', sans-serif !important;
+}
+.cal-location {
+}
+.cal-description {
+    margin: 2px;
+    font-size: 13px;
+}
