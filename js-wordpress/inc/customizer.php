@@ -179,6 +179,21 @@ function js_wordpress_customize_register( $wp_customize ) {
         )
     );
 
+    $wp_customize->add_setting('js_wp_copyright',
+        array(
+            'default' => 'Your Name Here',
+            'capability' => 'edit_theme_options',
+        )
+    );
+
+    $wp_customize->add_control('js_wp_copyright',
+        array(
+            'type' => 'text',
+            'section' => 'js_wp_settings',
+            'label' => __( 'Owner Information' ),
+        )
+    );
+
     $wp_customize->add_setting('js_wp_right',
         array(
             'type'=>'option',
@@ -193,21 +208,6 @@ function js_wordpress_customize_register( $wp_customize ) {
             'section'=>'js_wp_settings',
             'label' => __( 'Place Widget Area to the Right?' ),
             'std' => '1',
-        )
-    );
-
-    $wp_customize->add_setting('js_wp_copyright',
-        array(
-            'default' => 'Your Name Here',
-            'capability' => 'edit_theme_options',
-        )
-    );
-
-    $wp_customize->add_control('js_wp_copyright',
-        array(
-            'type' => 'text',
-            'section' => 'js_wp_settings',
-            'label' => __( 'Owner Information' ),
         )
     );
 
@@ -276,9 +276,6 @@ function js_wordpress_customize_colors() {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color:  <?php echo $text_color_1; ?>;
 }
-.js_wordpress-headerimg {
-    max-width: <?php echo $theme_width; ?>px;
-}
 .js_wordpress-body {
     max-width: <?php echo $theme_width; ?>px;
 }
@@ -290,6 +287,11 @@ function js_wordpress_customize_colors() {
     width: <?php if ($show_side == 1) echo ($theme_width - $side_width - 2); else echo $theme_width; ?>px;
     float: <?php echo ($on_right == '1' ? 'left' :  'right'); ?>;
     background-color: <?php echo $theme_color_3; ?>;
+}
+@media (max-width: 768px) {
+    .content-area {
+        width: 100%;
+    }
 }
 .widget-area {
     <?php if ($show_side == '') echo "display:none !important;"; ?>
